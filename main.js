@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000);
     }
 
-    //checking result 
     const checkResult = () => {
         numOfAnswered += 1; 
         const inputValue = inputField.value; 
@@ -85,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault(); 
 
-        // avoid submitting form twice for same question
         if(!submitBtn.classList.contains('hide')) {
             const result = checkResult(); 
             giveFeedback(result); 
@@ -96,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } 
     });
 
-    //get next number
     nextBtn.addEventListener('click', () => {
         feedback.innerText = ''; 
         inputField.value = '';
